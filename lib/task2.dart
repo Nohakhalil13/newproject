@@ -19,18 +19,17 @@ class _TicTacToeScreenState extends State<TicTacToeScreen> {
   int scoreO = 1;
   int scoreX = 0;
 
-  // Grid Data (empty strings for empty cells)
   List<String> displayExOh = ['', '', '', '', '', '', '', '', ''];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF1E1E1E), // Dark background matching image
+      backgroundColor: const Color(0xFF1E1E1E), 
       body: Column(
         children: [
           const SizedBox(height: 60),
           
-          // 1. Score Board
+          
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -42,7 +41,7 @@ class _TicTacToeScreenState extends State<TicTacToeScreen> {
 
           const SizedBox(height: 40),
 
-          // 2. Tic Tac Toe Grid
+         
           Expanded(
             child: Padding(
               padding: const EdgeInsets.all(20.0),
@@ -54,11 +53,10 @@ class _TicTacToeScreenState extends State<TicTacToeScreen> {
                 itemBuilder: (BuildContext context, int index) {
                   return GestureDetector(
                     onTap: () {
-                      // Logic lel click momken tedifiha hena
                     },
                     child: Container(
                       decoration: BoxDecoration(
-                        border: Border.all(color: Colors.grey.shade700), // Grid lines
+                        border: Border.all(color: Colors.grey.shade700), 
                       ),
                       child: Center(
                         child: Text(
@@ -77,7 +75,6 @@ class _TicTacToeScreenState extends State<TicTacToeScreen> {
     );
   }
 
-  // Helper function lel Score UI
   Widget _buildScoreColumn(String player, String score) {
     return Column(
       children: [
